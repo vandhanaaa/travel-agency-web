@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; 
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-3 rounded-full px-5 py-2 border border-transparent transition;
+  }
+
+  .btn-text {
+    @apply text-sm font-semibold whitespace-nowrap;
+  }
+
+  .btn-full {
+    @apply w-full justify-center;
+  }
+
+  .btn-dark-green {
+    @apply bg-green-700 text-white hover:bg-green-800;
+  }
+
+  .navbar {
+    @apply fixed top-0 left-0 w-full z-50 transition-all duration-300 items-center justify-between;
+  }
+
+  .navbar-transparent {
+    @apply bg-white/40 backdrop-blur-lg;
+  }
+
+  .navbar-solid {
+    @apply bg-white shadow-md;
+  }
+
+  /* INNER CONTAINER */
+  .navbar-inner {
+    @apply flex items-center justify-between max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-4;
+  }
+
+
+  .navbar-links { @apply hidden lg:flex items-center gap-12 text-lg h-full; }
+
+  .nav-link:hover { 
+    @apply font-semibold text-black;
+  }
+
+  .navbar-cta {
+    @apply hidden lg:flex items-center;
+  }
+
+  .navbar-menu-icon {
+  @apply inline-block cursor-pointer lg:hidden;
+  }
+
+  .hero-section {
+    @apply relative bg-cover bg-center min-h-[120vh] text-white flex items-center justify-center text-center px-6 pt-24;
+  }
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/40;
+  }
+
+  .hero-content {
+    @apply relative z-10 flex flex-col items-center justify-center text-center;
+  }
+
+  .hero-title {
+    @apply text-5xl font-bold mb-4;
+  }
+
+  .hero-subtitle {
+    @apply text-lg mb-8;
+  }
+
+  .hero-button {
+    @apply bg-green-700 hover:bg-green-800 px-8 py-3 text-lg rounded-full transition;
+  }
+
+  /* POPULAR DESTINATIONS  */
+  .locations-page {
+    @apply py-16 px-6 max-w-7xl mx-auto;
+  }
+
+  .locations-heading {
+    @apply text-3xl font-bold text-center mb-8;
+  }
+
+  .locations-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6;
+  }
+
+  .location-card {
+    @apply block rounded-xl overflow-hidden border border-gray-200 bg-white transition shadow-sm;
+  }
+
+  .location-card:hover {
+    @apply shadow-lg;
+  }
+
+  .location-image {
+    @apply relative h-48 w-full overflow-hidden;
+  }
+
+  .location-image img {
+    @apply object-cover transition-transform duration-300;
+  }
+
+  .location-card:hover .location-image img {
+    @apply scale-105;
+  }
+
+  .location-title {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .location-desc {
+    @apply text-gray-600 text-sm;
+  }
+
+  /* PACKAGES  */
+  .packages-section {
+    @apply py-16 px-6 max-w-7xl mx-auto bg-gray-50;
+  }
+
+  .package-card {
+    @apply border rounded-lg p-6 hover:shadow-lg transition;
+  }
+
+  .package-title {
+    @apply text-xl font-semibold;
+  }
+
+  .package-length {
+    @apply text-sm text-gray-500 mt-2;
+  }
+
+  .package-price {
+    @apply text-lg font-bold mt-4;
+  }
+
+  .package-desc {
+    @apply text-gray-600 mt-2;
+  }
+
+  .package-button {
+    @apply mt-4 bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-full transition;
+  }
+
+  /*Footer*/
+  .footer {
+    @apply py-10 bg-green-700 text-white text-center;
+  }
+
+  .footer-title {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  .footer-button {
+    @apply px-8 py-3 bg-white text-green-700 font-semibold rounded-full hover:bg-gray-100 transition;
+  }
+
+  .location-detail-page {
+    @apply max-w-5xl mx-auto px-6 py-8;
+  }
+
+  .location-detail-image {
+    @apply relative h-72 w-full mb-6 rounded-lg overflow-hidden;
+  }
+
+  .mobile-menu {
+  position: fixed;
+  top: 100%;          
+  right: 1rem;        
+  width: 280px;        
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+
+
+
+.mobile-menu-links {
+  @apply flex flex-col gap-6 px-2 py-8;
+}
+
+.mobile-menu-link {
+  @apply text-lg font-medium text-gray-800;
+}
+
+.mobile-menu-cta {
+  @apply px-6 pb-6;
+}
+
+
+}
